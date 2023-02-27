@@ -3,4 +3,5 @@ node_modules
 out
 next.config.js
 lint-staged.config.js
-
+tailwind.config.js
+postcss.config.js
