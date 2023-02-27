@@ -5,6 +5,7 @@ import { useTranslation } from "@/i18n";
 import { Header } from "@/layout/header";
 import { Footer } from "@/layout/footer";
 import Card from "@/components/Card";
+import styles from "./styles.module.scss";
 
 export const dynamic = "force-static";
 export default async function Page({
@@ -21,7 +22,7 @@ export default async function Page({
 
   return (
     <>
-      <main>
+      <main className={styles.container}>
         <Header heading={t("h1")} />
         <h2>
           <Trans t={t} i18nKey="welcome">
