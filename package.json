@@ -10,9 +10,9 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "migrateToLocize": "locize migrate --project-id=2e870386-77de-42ac-81ae-51f7b693ffca --api-key=1af89072-429b-4c26-816e-9f886c86f1d3 --path=./i18n/locales",
+    "migrateToLocize": "locize migrate --project-id=2e870386-77de-42ac-81ae-51f7b693ffca --api-key=$(grep API_KEY .env | cut -d '=' -f2) --path=./i18n/locales",
     "downloadLocales": "locize download --project-id 2e870386-77de-42ac-81ae-51f7b693ffca --ver latest  --path ./i18n/locales",
-    "syncLocales": "locize sync --project-id=2e870386-77de-42ac-81ae-51f7b693ffca --api-key=1af89072-429b-4c26-816e-9f886c86f1d3 --ver=latest --path=./i18n/locales --dry=true"
+    "syncLocales": "locize sync --project-id=2e870386-77de-42ac-81ae-51f7b693ffca --api-key=$(grep API_KEY .env | cut -d '=' -f2) --ver=latest --path=./i18n/locales --dry=true"
   },
   "lint-staged": {
     "*.{js, jsx, ts, tsx}": "eslint --cache --fix",
