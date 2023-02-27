@@ -1,0 +1,4 @@
+export const GRAFBASE_API_URL =
+  "https://nextjs-13-demo-main-ebubekirddemiray-gmailcom.grafbase.app/graphql";
+export const GRAFBASE_API_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Nzc1MTI5MzEsImlzcyI6ImdyYWZiYXNlIiwiYXVkIjoiMDFHVDlSWlkyNTAyVkhEREo5R0ZLU1ZUNVkiLCJqdGkiOiIwMUdUOVJaWTI1S1pYMFlKN1dIQllZVzYzNCIsImVudiI6InByb2R1Y3Rpb24iLCJwdXJwb3NlIjoicHJvamVjdC1hcGkta2V5In0.jeZHdvuJS26z4hzDVQs4SatH2LZwcBMf-BvvcD7AegU";

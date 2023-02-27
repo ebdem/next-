@@ -3,8 +3,8 @@ import { useTranslation } from "@/i18n";
 import { IHeadProps } from "@/@types/type";
 
 export default async function Head({ params: { lng } }: IHeadProps) {
-  const { t } = await useTranslation(lng, "second-page");
-  console.log("second-page head", lng, t("title"));
+  const { t } = await useTranslation(lng, "details");
+  console.log("details head", lng, t("title"));
 
   return (
     <>

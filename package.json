@@ -10,6 +10,7 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "mock:api": "graphql-faker  --port 4000 ./schema.graphql",
     "migrateToLocize": "locize migrate --project-id=2e870386-77de-42ac-81ae-51f7b693ffca --api-key=$(grep API_KEY .env | cut -d '=' -f2) --path=./i18n/locales",
     "downloadLocales": "locize download --project-id 2e870386-77de-42ac-81ae-51f7b693ffca --ver latest  --path ./i18n/locales",
     "syncLocales": "locize sync --project-id=2e870386-77de-42ac-81ae-51f7b693ffca --api-key=$(grep API_KEY .env | cut -d '=' -f2) --ver=latest --path=./i18n/locales --dry=true"
@@ -20,7 +21,10 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "accept-language": "^3.0.18",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
     "i18next": "^22.4.10",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-resources-to-backend": "^1.1.2",
@@ -58,6 +62,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.11",
+    "graphql-faker": "^2.0.0-rc.25",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "postcss": "^8.4.21",

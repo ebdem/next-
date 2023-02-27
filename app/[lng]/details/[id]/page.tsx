@@ -11,7 +11,7 @@ export default async function Page({
     lng: string;
   };
 }) {
-  const { t } = await useTranslation(lng, "second-page");
+  const { t } = await useTranslation(lng, "details");
   return (
     <>
       <main>
