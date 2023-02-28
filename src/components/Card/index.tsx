@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { IUserProps } from "@/@types/type";
 import { UserRateIncrement } from "@/services/incrementUserRating";
 import { GetAllUser } from "@/services/getAllUsers";
-import Link from "next/link";
 import { useTranslation } from "@/i18n/client";
 
 export default function Card({ params }: any) {
