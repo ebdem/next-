@@ -1,0 +1,6 @@
+{
+  "description": "Bu sayfa i18next ile çevrili",
+  "helpLocize": "Bu çeviri için yardım edin",
+  "languageSwitcher": "Değiştir şundan  <1>{{lng}}</1> şuna: ",
+  "languageSwitcherTitle": "Dil değiştir"
+}

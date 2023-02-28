@@ -6,5 +6,8 @@
   "counter_zero": "nessuno selezionato",
   "h1": "Una pagina client, per dimostrare il i18n nel client",
   "title": "Pagina client",
-  "to-second-client-page": "alla seconda pagina client"
+  "to-second-client-page": "alla seconda pagina client",
+  "see-detail": "vedi dettagli",
+  "company-members": "Membri della società",
+  "rate": "Valutazione"
 }

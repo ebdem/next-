@@ -1,10 +1,12 @@
 import React from "react";
 import { useTranslation } from "@/i18n";
-import { IHeadProps } from "@/@types/type";
 
-export default async function Head({ params: { lng } }: IHeadProps) {
-  const { t } = await useTranslation(lng, "details");
-  console.log("details head", lng, t("title"));
+export default async function Head({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
+  const { t } = await useTranslation(lng, "second-page");
 
   return (
     <>

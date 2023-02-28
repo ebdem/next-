@@ -5,5 +5,8 @@
   "counter_zero": "none selected",
   "h1": "A client page, to demonstrate client side i18n",
   "title": "Client page",
-  "to-second-client-page": "to second client page"
+  "to-second-client-page": "to second client page",
+  "see-detail": "See detail",
+  "company-members": "Company members",
+  "rate": "Rate"
 }

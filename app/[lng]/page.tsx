@@ -28,7 +28,7 @@ export default async function Page({
           </Trans>
         </h2>
         <hr style={{ marginTop: 20, width: "90%" }} />
-        <Card />
+        <Card params={lng} />
       </main>
       {/* @ts-expect-error Server Component */}
       <Footer lng={lng} />

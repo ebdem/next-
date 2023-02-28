@@ -25,7 +25,7 @@ export const FooterBase = ({
         .map((l, index) => {
           return (
             <span key={l}>
-              {index > 0 && " or "}
+              {index > 0 && " | "}
               <Link href={`/${l}${path}`}>{l}</Link>
             </span>
           );
