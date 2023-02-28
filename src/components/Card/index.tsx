@@ -71,6 +71,8 @@ export default function Card({ params }: any) {
                         </span>
                       </button>
                       <Link
+                        passHref
+                        legacyBehavior
                         href={{
                           pathname: `/${params}/details`,
                           query: { id: node.id },
