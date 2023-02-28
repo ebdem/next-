@@ -1,3 +1,7 @@
+### Attention !!!!!!!!!!!!
+
+        Nextjs 13 experimental (beta)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -14,25 +18,41 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+    * - TypeScript
+    * - Redux-Toolkit
+    * - GeaphQL
+    * - Tailwindcss
+    * - Scss-Sass
+    * - i18Next
+    * - Prettier
+    * - Eslint
+    * - Husky
+    * - Grafbase
+    * - StoryBook
+    * - Lint-stage
+    * - Localize
+    * - and finally NEXT13!!!
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Remote Localize File command
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    yarn migrateToLocize
+    yarn downloadLocales
+    yarn syncLocales
 
-## Learn More
+## Lint and LintStage
 
-To learn more about Next.js, take a look at the following resources:
+    yarn lint
+    yarn lint-staged
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## For StoryBook
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    yarn storybook
 
-## Deploy on Vercel
+## env file like this
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    MODE=
+    API_KEY= ---> for localize
+    GRAFBASE_API_URL=
+    GRAFBASE_API_KEY=
