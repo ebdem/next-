@@ -3,11 +3,13 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { counterReducer, counterSlice } from "./features/counterSlice";
 import { detailsReducer } from "./features/detailSlice";
+import { usersReducer } from "./features/usersSlice";
 
 export const store = configureStore({
   reducer: {
     [counterSlice.name]: counterReducer,
     detail: detailsReducer,
+    users: usersReducer,
   },
   devTools: process.env.MODE === "development",
   //middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([]),

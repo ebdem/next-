@@ -2,17 +2,18 @@
 import React, { useEffect } from "react";
 import { IUserProps } from "@/@types/type";
 import { UserRateIncrement } from "@/services/incrementUserRating";
-import { GetAllUser } from "@/services/getAllUsers";
+import Link from "next/link";
 import { useTranslation } from "@/i18n/client";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { getUsers } from "@/redux/features/usersSlice";
 
 export default function Card({ params }: any) {
-  const [users, setUsers] = React.useState<IUserProps[]>([]);
   const { t } = useTranslation(params, "client-page");
+  const dispatch = useAppDispatch();
+  const { users } = useAppSelector((state) => state.users);
 
   const fetchData = () => {
-    GetAllUser().then((data) => {
-      setUsers(data?.data?.customerCollection?.edges);
-    });
+    dispatch(getUsers());
   };
   const [sortedUsers, setSortedUsers] = React.useState<IUserProps[]>([]);
 
@@ -69,9 +70,16 @@ export default function Card({ params }: any) {
                           {node.rate}
                         </span>
                       </button>
-                      <a href={`/${params}/details?id=${node.id}`}>
+                      <Link
+                        passHref
+                        legacyBehavior
+                        href={{
+                          pathname: `/${params}/details`,
+                          query: { id: node.id },
+                        }}
+                      >
                         <button type="button">{t("see-detail")}</button>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
