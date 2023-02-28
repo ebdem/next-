@@ -14,6 +14,7 @@ export default function Page({
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   console.log("searchParams", searchParams);
+  console.log("params", params);
 
   useEffect(() => {
     setLoading(true);
