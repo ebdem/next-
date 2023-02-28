@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "@/i18n/client";
-import { Footer } from "@/layout/footer";
 import { Header } from "@/layout/header";
 import { GetSingleUser } from "@/services/getSingleUser";
 import Link from "next/link";
@@ -23,13 +21,11 @@ export default function Page({
       setLoading(false);
     });
   }, []);
-  const { t } = useTranslation(params?.lng, "second-page");
+  //const { t } = useTranslation(params?.lng, "second-page");
   //const { data } = await GetSingleUser(searchParams?.id as string);
   return (
     <>
       <main>
-        <Header heading={t("h1")} />
-
         {loading ? (
           <div>Loading...</div>
         ) : (
