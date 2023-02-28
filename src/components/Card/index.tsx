@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useTranslation } from "@/i18n/client";
 
 export default function Card({ params }: any) {
-  console.log(params, "params");
   const [users, setUsers] = React.useState<IUserProps[]>([]);
   const { t } = useTranslation(params, "client-page");
 

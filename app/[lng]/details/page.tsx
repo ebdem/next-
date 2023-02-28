@@ -1,21 +1,28 @@
-import React from "react";
-import { useTranslation } from "@/i18n";
+"use client";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "@/i18n/client";
 import { Footer } from "@/layout/footer";
 import { Header } from "@/layout/header";
 import { GetSingleUser } from "@/services/getSingleUser";
 import Link from "next/link";
 
-export default async function Page({
-  params: { lng },
+export default function Page({
+  params,
   searchParams,
 }: {
-  params: {
-    lng: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+  searchParams: { id: string };
+  params: { lng: string };
 }) {
-  const { t } = await useTranslation(lng, "second-page");
-  const { data } = await GetSingleUser(searchParams?.id as string);
+  const [data, setData] = useState<any>(null);
+  const fetchData = async () => {
+    const { data } = await GetSingleUser(searchParams?.id as string);
+    setData(data);
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+  const { t } = useTranslation(params?.lng, "second-page");
+  //const { data } = await GetSingleUser(searchParams?.id as string);
   return (
     <>
       <main>
@@ -61,7 +68,7 @@ export default async function Page({
                     Rate
                   </li>
                 </ul>
-                <Link href={`/${lng}`}>
+                <Link href={`/${params?.lng}`}>
                   <button className="transition-colors bg-purple-700 hover:bg-purple-800 p-2 rounded-sm w-full text-white text-hover shadow-md shadow-purple-900">
                     Go Home
                   </button>
@@ -71,8 +78,6 @@ export default async function Page({
           </div>
         </div>
       </main>
-      {/* @ts-expect-error Server Component */}
-      <Footer lng={lng} path={`/details?id=${searchParams?.id as string}`} />
     </>
   );
 }
