@@ -18,8 +18,6 @@ export default async function Page({
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng);
 
-  //console.log(data?.customerCollection?.edges);
-
   return (
     <>
       <main className={styles.container}>

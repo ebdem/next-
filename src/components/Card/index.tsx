@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { IUserProps } from "@/@types/type";
 import { UserRateIncrement } from "@/services/incrementUserRating";
 import { GetAllUser } from "@/services/getAllUsers";
+import Link from "next/link";
 
 export default function Card() {
   const [users, setUsers] = React.useState<IUserProps[]>([]);
@@ -67,6 +68,17 @@ export default function Card() {
                           {node.rate}
                         </span>
                       </button>
+                      <Link href={`/details/${node.id}`}>
+                        <button
+                          type="button"
+                          className="text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                        >
+                          Puan Ver
+                          <span className="inline-flex items-center justify-center w-4 h-4 ml-2 text-xs font-semibold text-blue-800 bg-blue-200 rounded-full">
+                            {node.rate}
+                          </span>
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
