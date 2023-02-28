@@ -3,22 +3,19 @@ import React, { useEffect, useState } from "react";
 import { Header } from "@/layout/header";
 import { GetSingleUser } from "@/services/getSingleUser";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
-export default function Page({
-  params,
-  searchParams,
-}: {
-  searchParams: { id: string };
-  params: { lng: string };
-}) {
+export default function Page({ params }: { params: { lng: string } }) {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  console.log("searchParams", searchParams);
+  const searchParams = useSearchParams();
+  const search = searchParams.get("id");
+  console.log("search", search);
   console.log("params", params);
 
   useEffect(() => {
     setLoading(true);
-    GetSingleUser(searchParams?.id).then((res) => {
+    GetSingleUser(search as string).then((res) => {
       setData(res.data);
       setLoading(false);
     });
