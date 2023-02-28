@@ -2,3 +2,9 @@
 export interface CounterState {
   value: number;
 }
+
+export interface DetailState {
+  customer: object;
+  detail: object;
+  status: string;
+}
