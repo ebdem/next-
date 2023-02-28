@@ -70,16 +70,9 @@ export default function Card({ params }: any) {
                           {node.rate}
                         </span>
                       </button>
-                      <Link
-                        passHref
-                        legacyBehavior
-                        href={{
-                          pathname: `/${params}/details`,
-                          query: { id: node.id },
-                        }}
-                      >
+                      <a href={`/${params}/details?id=${node.id}`}>
                         <button type="button">{t("see-detail")}</button>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
