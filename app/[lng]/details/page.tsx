@@ -4,6 +4,7 @@ import { Header } from "@/layout/header";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useTranslation } from "@/i18n/client";
+import { Footer } from "@/layout/footer/client";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail } from "@/redux/features/detailSlice";
 
@@ -88,6 +89,7 @@ export default function Page({ params }: { params: { lng: string } }) {
           </>
         )}
       </main>
+      <Footer lng={params?.lng} path={`/details?id=${search}`} />
     </>
   );
 }
